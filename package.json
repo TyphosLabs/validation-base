@@ -1,6 +1,6 @@
 {
   "name": "@typhoslabs/validation-base",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Base validation functionality",
   "main": "index.js",
   "scripts": {

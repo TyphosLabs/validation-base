@@ -3,9 +3,22 @@
 var ValidationChain = require('./validation-chain.js');
 
 module.exports = function(){
+
+    var fn;
     
     // Validation class
-    function Validation(){}
+    function Validation(){
+        // if there is a base fn, call it
+        if(typeof fn === 'function'){
+            return fn.apply(this, arguments); // jshint ignore:line
+        }
+        
+        // otherwise, we're done here
+    }
+
+    Validation.setFn = function setBaseFn(base_fn){
+        fn = base_fn;
+    };
 
     /*** Prototype methods *****************************************************************/
 
